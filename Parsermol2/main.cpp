@@ -30,7 +30,6 @@ int main() {
 
     if (mol2file.is_open()) {
         while (getline(mol2file, line)) {
-            // process line here
             if (line.find("@<TRIPOS>MOLECULE") != std::string::npos ) {
                 getline(mol2file, line);
                 molecule.name = line;
